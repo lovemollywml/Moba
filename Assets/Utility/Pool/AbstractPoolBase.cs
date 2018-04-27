@@ -8,7 +8,7 @@ public abstract class AbstractPoolBase : IPool {
     protected abstract object CreateObj();
     protected virtual void DestroyObj(object obj)
     {
-       // obj.ClearActiveData();
+        obj.ClearActiveData();
     }
     protected virtual void OnRemoveCompleted(object obj) { }
     public AbstractPoolBase(int initSize, int maxSize)
